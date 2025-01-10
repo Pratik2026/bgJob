@@ -4,7 +4,7 @@ import connectDB from "./DB/connect_db.js";
 import colors from "colors";
 
 import startCryptoJob from "./scheduler/cryptojob.js";
-import { getStats } from "./controllers/cryptoController.js";
+import { getStats, getDeviation } from "./controllers/cryptoController.js";
 
 // Config dotenv
 config({ path: "./config/config.env" });
@@ -23,6 +23,7 @@ app.use(express.json());
 
 // API
 router.get("/stats", getStats);
+router.get("/deviation", getDeviation);
 
 // Start the background job
 startCryptoJob();
