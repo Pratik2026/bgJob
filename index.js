@@ -3,7 +3,7 @@ import { config } from "dotenv";
 import connectDB from "./DB/connect_db.js";
 import colors from "colors";
 
-import startCryptoJob from "./scheduler/cryptojob.js";
+import startCryptoJob from "./jobs/cryptojob.js";
 import { getStats, getDeviation } from "./controllers/cryptoController.js";
 
 // Config dotenv
